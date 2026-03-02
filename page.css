@@ -1,4 +1,5 @@
 body {
+    background : url("./image/OIP-4032012037.jpg");
     min-height: 100vh;
     color: #ffffff;
     font-family: Arial;
@@ -32,9 +33,7 @@ li {
 
 .boxes {
     color: white;
-    background:
-        radial-gradient(ellipse at right, #9400d3, transparent),
-        radial-gradient(ellipse at left, darkblue, transparent);
+    background-color: transparent;
     background-size: farthest-side;
 
     border-radius: 8px;
@@ -46,8 +45,9 @@ li {
     padding-inline: 0.7rem;
 }
 .premSection {
-    color: white;
+    color: black;
 
+    background-color: transparent;
     border-radius: 8px;
 
     font-family: sans-serif;
@@ -59,9 +59,8 @@ li {
     padding-block: 1rem;
 }
 .lire {
-    background:
-        radial-gradient(ellipse at right, #69359c, transparent),
-        radial-gradient(ellipse at left, darkblue, transparent);
+    background-color: white;
+    color: black;
 
     box-shadow: 0.1px 0.1px 3px 1px white;
     margin-left: 150px;
