@@ -1,81 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Supreme Style</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <h2>I am an alien</h2>
-    <!--John-->
-    <!DOCTYPE html>
-    <canvas id="snakeCanvas" width="400" height="400"></canvas>
-    <script>
-        const canvas = document.getElementById('snakeCanvas');
-        const ctx = canvas.getContext('2d');
 
-        const box = 20; // size of each box
-        let snake = [{ x: 8 * box, y: 8 * box }];
-        let direction = 'RIGHT';
-        let food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
+    <div class="centrer">
 
-        document.addEventListener('keydown', directionControl);
+        <div class="header">
+            <div class="logo">Supreme</div>
+            <div class="time">21/01/2026 07:26pm LDN</div>
+        </div>
 
-        function directionControl(event) {
-            if (event.keyCode === 37 && direction !== 'RIGHT') direction = 'LEFT';
-            if (event.keyCode === 38 && direction !== 'DOWN') direction = 'UP';
-            if (event.keyCode === 39 && direction !== 'LEFT') direction = 'RIGHT';
-            if (event.keyCode === 40 && direction !== 'UP') direction = 'DOWN';
-        }
+        <ul class="menu">
+            <li>news</li>
+            <li>fall/winter 2025 preview</li>
+            <li>fall/winter 2025 lookbook</li>
+            <li>shop</li>
+            <li>random</li>
+            <li>about</li>
+            <li>stores</li>
+            <li>contact</li>
+            <li>mailing list</li>
 
-        function collision(head, array) {
-            for (let i = 0; i < array.length; i++) {
-                if (head.x === array[i].x && head.y === array[i].y) {
-                    return true;
-                }
-            }
-            return false;
-        }
+            <div class="icone">
+                <img src="app-store.png" alt="appstore">
+                <img src="facebook.png" alt="facebook">
+                <img src="instagram.png" alt="instagrame">
+                <img src="social.png" alt="wechat">
+                <img src="spotify.png" alt="spotify">
+                <img src="weibo-website.png" alt="weibo">
+                <img src="youtube.png" alt="youtube">
 
-        function draw() {
-            ctx.fillStyle = '#000';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            </div>
+        </ul>
 
-            for (let i = 0; i < snake.length; i++) {
-                ctx.fillStyle = (i === 0) ? 'green' : 'white';
-                ctx.fillRect(snake[i].x, snake[i].y, box, box);
-            }
+    </div>
 
-            ctx.fillStyle = 'red';
-            ctx.fillRect(food.x, food.y, box, box);
-
-            let snakeX = snake[0].x;
-            let snakeY = snake[0].y;
-
-            if (direction === 'LEFT') snakeX -= box;
-            if (direction === 'UP') snakeY -= box;
-            if (direction === 'RIGHT') snakeX += box;
-            if (direction === 'DOWN') snakeY += box;
-
-            if (snakeX === food.x && snakeY === food.y) {
-                food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
-            } else {
-                snake.pop();
-            }
-
-            const newHead = { x: snakeX, y: snakeY };
-
-            if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
-                clearInterval(game);
-            }
-
-            snake.unshift(newHead);
-        }
-
-        const game = setInterval(draw, 1000);
-    </script>
 </body>
 </html>
-
