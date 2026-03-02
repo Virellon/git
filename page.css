@@ -1,9 +1,10 @@
 body {
-    background : url("./image/OIP-4032012037.jpg");
+    background : url("./image/OIP-304777723.jpg");
     min-height: 100vh;
-    color: #ffffff;
-    font-family: Arial;
-
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     /* bleu pour section dégradé : #163c9c */
 }
 
@@ -28,9 +29,12 @@ ul {
 li {
     all: unset;
     margin-right: 5px;
-    color: white;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 .boxes {
     color: white;
     background-color: transparent;
