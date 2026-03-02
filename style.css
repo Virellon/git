@@ -325,20 +325,21 @@ body {
 /* Icone */
 
 .icone {
-    margin-top: 40px;
+
+    margin-top: 5px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: menu;
+    gap:  5px;
 }
 
-.social img {
+.icone img {
     width: 22px;
     height: 22px;
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.social img:hover {
+.icone img:hover {
     opacity: 1;
     transform: scale(1.2);
 }
